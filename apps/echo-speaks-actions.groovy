@@ -3935,7 +3935,7 @@ void clearActHistory(){
 private void executeAction(evt = null, Boolean testMode=false, String src=sNULL, Boolean allDevsResp=false, Boolean isRptAct=false, Map tierData=null) {
     String meth="executeAction"
     Long startTime = now()
-    Boolean testMode = false
+//  Boolean testMode = false
     if((Boolean)settings.actTestRun) { testMode = true }
     if(isTrc())logTrace(meth+" ${src ? '('+src+')' : sBLANK}${testMode ? " | [TestMode]" : sBLANK}${allDevsResp ? " | [AllDevsResp]" : sBLANK}${isRptAct ? " | [RepeatEvt]" : sBLANK}")
     if(isPaused(true)) { logWarn("Action is PAUSED... Skipping Action Execution...", true); return }
